@@ -1,6 +1,6 @@
 footer {
     background-color: $bg-greydark;
-    padding: 22px 25px 22px 25px;
+    padding: 22px 24px 22px 25px;
     
 }
 .footer-logo {
@@ -28,3 +28,24 @@ ul {
 .fa-handshake-angle {
     font-size: 11px;
 }
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+    flex-direction: row;
+    justify-content: right;
+    }
+    .footer-logo {
+        order: 3
+    }
+    .list-1 {
+        order: 1;
+    }
+    .list-2 {
+        order: 2;
+    }
+    ul {
+        display: flex;
+        gap: 10px;
+    padding-right: 20px;
+    }
+    }

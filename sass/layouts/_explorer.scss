@@ -13,3 +13,12 @@
     font-size: 18px;
     font-weight: 300;
 }
+
+@media screen and (min-width: 768px) {
+.explorer {
+    flex-direction: column;
+    margin-top: auto;
+    padding: 30px 26px 30px 26px;
+
+}
+}

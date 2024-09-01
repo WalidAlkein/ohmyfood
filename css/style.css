@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -70,6 +71,7 @@ h1 {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 28px;
+  letter-spacing: 1px;
 }
 
 body {
@@ -98,12 +100,17 @@ h4 {
 h5 {
   font-weight: 500;
   font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 5px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
 }
 h5 .subtitle {
   font-weight: 300;
   font-size: 17px;
-}
-h5 .subtitle, h5 .title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -118,6 +125,34 @@ h6 {
   font-size: 16px;
 }
 
+.icon-container {
+  position: relative;
+  font-size: 24px; /* ou la taille que vous souhaitez pour vos icônes */
+  display: inline-block;
+}
+
+.heart-overlay {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  color: transparent;
+}
+.heart-overlay:hover {
+  color: #9356DC;
+  transition: color 0.3s ease-in;
+}
+
+.heart-overlay2 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  color: transparent;
+}
+.heart-overlay2:hover {
+  color: #9356DC;
+  transition: color 0.3s ease-in;
+}
+
 .gradient-button {
   font-weight: 500;
   padding: 13px 19px;
@@ -127,16 +162,12 @@ h6 {
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.5s ease;
+  width: max-content;
+  align-self: center;
 }
 .gradient-button:hover {
   opacity: 0.85;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.55);
-}
-
-header {
-  display: flex;
-  align-items: center;
-  padding: 24px 20px 14px 20px;
 }
 
 .logo {
@@ -145,26 +176,18 @@ header {
 }
 
 .header {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
+  padding: 24px 20px 14px 20px;
+  position: relative;
 }
 
 .arrow {
   color: inherit;
+  position: absolute;
+  left: 20px;
   top: 17px;
   font-size: 30px;
-  width: 25px;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.fa-heart {
-  color: red;
-}
-.fa-heart:hover {
-  color: blue;
 }
 
 .explorer {
@@ -183,6 +206,13 @@ header {
   font-weight: 300;
 }
 
+@media screen and (min-width: 768px) {
+  .explorer {
+    flex-direction: column;
+    margin-top: auto;
+    padding: 30px 26px 30px 26px;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
@@ -199,9 +229,14 @@ header {
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  .location {
+    box-shadow: none;
+  }
+}
 footer {
   background-color: #353535;
-  padding: 22px 25px 22px 25px;
+  padding: 22px 24px 22px 25px;
 }
 
 .footer-logo {
@@ -236,6 +271,27 @@ ul {
   font-size: 11px;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  .footer-logo {
+    order: 3;
+  }
+  .list-1 {
+    order: 1;
+  }
+  .list-2 {
+    order: 2;
+  }
+  ul {
+    display: flex;
+    gap: 10px;
+    padding-right: 20px;
+  }
+}
 .instruction {
   margin-top: 48px;
   margin-bottom: 68px;
@@ -247,6 +303,7 @@ ul {
   align-items: center;
   margin: 26px 20px 25px 8px;
   width: 100%;
+  text-wrap: nowrap;
 }
 
 .ellipse {
@@ -286,6 +343,26 @@ span {
   font-weight: 500;
 }
 
+@media screen and (min-width: 1024px) {
+  .mediaq1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2vw;
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+  .container {
+    width: max-content;
+  }
+  .instruction {
+    max-width: 1080px;
+    margin: auto;
+    padding: 25px 25px;
+  }
+  .content {
+    width: fit-content;
+  }
+}
 .restaurant {
   padding-top: 54px;
   background-color: #F6F6F6;
@@ -339,8 +416,8 @@ i {
 }
 
 .card-link {
-  display: block; /* Rend le lien de type bloc pour qu'il puisse englober un article */
-  text-decoration: none; /* Supprime le soulignement du lien */
+  display: block;
+  text-decoration: none;
   color: inherit;
 }
 
@@ -348,6 +425,21 @@ i {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .grid-restaurant {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    justify-content: space-between;
+    row-gap: 50px;
+    max-width: 1080px;
+    padding: 2vw;
+    margin: auto;
+  }
+  .mediaq {
+    max-width: 1080px;
+    margin: auto;
+  }
+}
 .card-menu {
   width: 100%;
   background-color: #ffffff;
@@ -409,7 +501,7 @@ i {
 .restaurant-section {
   padding-top: 54px;
   background-color: #F6F6F6;
-  border-radius: 25px;
+  border-radius: 25px 25px 0px 0px;
   width: 100%;
   position: relative;
   top: -50px;
@@ -419,6 +511,103 @@ i {
   width: 50px;
   flex-shrink: 0;
   text-align: right;
+}
+
+.lanote {
+  object-fit: cover;
+  width: 100%;
+  height: 302px;
+}
+
+.footer-menu {
+  margin-top: -50px;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-section {
+    max-width: 1080px;
+    margin: auto;
+  }
+}
+.grid-menu {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards; /* Animation qui va durer 0.5 secondes et garder l'état final */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.grid-menu:nth-child(1) {
+  animation-delay: 0.5s; /* Début 0.5 secondes après le chargement de la page */
+}
+
+.grid-menu:nth-child(2) {
+  animation-delay: 1s; /* Début 1 seconde après le chargement de la page */
+}
+
+.grid-menu:nth-child(3) {
+  animation-delay: 1.5s; /* Début 1.5 secondes après le chargement de la page */
+}
+
+.menu {
+  overflow: hidden;
+}
+
+.loader-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 3s ease-out;
+  font-size: 50px;
+  gap: 40px;
+  animation: fadeout 3s ease forwards;
+  background-color: #F6F6F6;
+  z-index: 1;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  90% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.d1 {
+  animation: loader infinite 0.3s alternate;
+}
+
+.d2 {
+  animation: loader infinite 0.3s alternate;
+}
+
+.d3 {
+  animation: loader infinite 0.3s alternate;
+}
+
+@keyframes loader {
+  100% {
+    transform: translateX(-30px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

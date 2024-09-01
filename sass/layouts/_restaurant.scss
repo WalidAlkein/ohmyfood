@@ -47,11 +47,28 @@ i {
     font-size: 22px;
 }
 .card-link {
-    display: block; /* Rend le lien de type bloc pour qu'il puisse englober un article */
-    text-decoration: none; /* Supprime le soulignement du lien */
+    display: block; 
+    text-decoration: none; 
     color: inherit;
 }
 .subtitle {
     display: block;
 }
-            
+@media screen and (min-width: 768px) {
+    .grid-restaurant {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        justify-content: space-between;
+        row-gap: 50px;
+        max-width: 1080px;
+        padding:  2vw;
+        margin:  auto;
+        
+    }
+    
+    .mediaq {
+            max-width: 1080px;
+            margin: auto;
+        }
+    }
+    
