@@ -127,7 +127,7 @@ h6 {
 
 .icon-container {
   position: relative;
-  font-size: 24px; /* ou la taille que vous souhaitez pour vos icônes */
+  font-size: 24px;
   display: inline-block;
 }
 
@@ -439,6 +439,7 @@ i {
   }
 }
 .card-menu {
+  position: relative;
   width: 100%;
   background-color: #ffffff;
   border-radius: 15px;
@@ -453,6 +454,7 @@ i {
   align-items: flex-end;
   padding: 16px 25px 12px 13px;
   line-height: 25px;
+  transition: width 0.5s ease;
 }
 .card-menu-text > div {
   width: calc(100% - 50px);
@@ -508,6 +510,31 @@ i {
     height: 382px;
   }
 }
+.box {
+  position: absolute;
+  top: 0;
+  right: -25%; /* Commence en dehors de la vue à droite */
+  width: 15%;
+  height: 100%;
+  background-color: #99E2D0; /* Couleur de fond de la coche, ajustez selon votre design */
+  color: white; /* Couleur de l'icône */
+  font-size: 1.5em; /* Ajustez la taille de l'icône selon vos besoins */
+  transition: right 0.3s ease-out;
+}
+
+.card-menu:hover .box {
+  right: 0; /* Déplace la coche pour qu'elle occupe 25% du conteneur */
+}
+
+.card-menu:hover .card-menu-text {
+  width: 85%;
+}
+
+.fa-circle-check {
+  align-content: center;
+  text-align-last: center;
+}
+
 .restaurant-section {
   padding-top: 54px;
   background-color: #F6F6F6;
