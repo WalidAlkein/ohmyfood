@@ -249,6 +249,8 @@ footer {
 ul {
   list-style-type: none;
   line-height: 25px;
+  text-wrap: nowrap;
+  margin-right: 20px;
 }
 
 .list-1 {
@@ -289,7 +291,11 @@ ul {
   ul {
     display: flex;
     gap: 10px;
-    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  ul {
+    margin-right: 40px;
   }
 }
 .instruction {
