@@ -30,6 +30,7 @@ margin: auto;
     opacity: 0;
     transform: translateX(-100%);
     animation: slideIn 0.5s forwards; /* Animation qui va durer 0.5 secondes et garder l'état final */
+    
 }
 
 @keyframes slideIn {
@@ -43,15 +44,15 @@ margin: auto;
     }
 }
 
-.grid-menu:nth-child(1) {
+.grid-menu.grid-menu-1 {
     animation-delay: 0.5s; /* Début 0.5 secondes après le chargement de la page */
 }
 
-.grid-menu:nth-child(2) {
+.grid-menu.grid-menu-2 {
     animation-delay: 1s; /* Début 1 seconde après le chargement de la page */
 }
 
-.grid-menu:nth-child(3) {
+.grid-menu.grid-menu-3 {
     animation-delay: 1.5s; /* Début 1.5 secondes après le chargement de la page */
 }
 .menu {

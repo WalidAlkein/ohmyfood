@@ -347,7 +347,6 @@ span {
   .mediaq1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 2vw;
     margin: 0 auto;
     max-width: 1080px;
   }
@@ -355,9 +354,8 @@ span {
     width: max-content;
   }
   .instruction {
-    max-width: 1080px;
     margin: auto;
-    padding: 25px 25px;
+    padding: 25px 20px;
   }
   .content {
     width: fit-content;
@@ -432,7 +430,7 @@ i {
     justify-content: space-between;
     row-gap: 50px;
     max-width: 1080px;
-    padding: 2vw;
+    padding: 2vw 0;
     margin: auto;
   }
   .mediaq {
@@ -545,15 +543,15 @@ i {
     transform: translateX(0);
   }
 }
-.grid-menu:nth-child(1) {
+.grid-menu.grid-menu-1 {
   animation-delay: 0.5s; /* Début 0.5 secondes après le chargement de la page */
 }
 
-.grid-menu:nth-child(2) {
+.grid-menu.grid-menu-2 {
   animation-delay: 1s; /* Début 1 seconde après le chargement de la page */
 }
 
-.grid-menu:nth-child(3) {
+.grid-menu.grid-menu-3 {
   animation-delay: 1.5s; /* Début 1.5 secondes après le chargement de la page */
 }
 
