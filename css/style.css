@@ -472,7 +472,8 @@ i {
 .menu-title {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 24px;
 }
 
 .grid-menu {
@@ -496,6 +497,17 @@ i {
   justify-content: center;
 }
 
+.photo {
+  height: 275px;
+  object-fit: cover;
+  width: -webkit-fill-available;
+}
+
+@media screen and (min-width: 768px) {
+  .photo {
+    height: 382px;
+  }
+}
 .restaurant-section {
   padding-top: 54px;
   background-color: #F6F6F6;
@@ -509,12 +521,6 @@ i {
   width: 50px;
   flex-shrink: 0;
   text-align: right;
-}
-
-.lanote {
-  object-fit: cover;
-  width: 100%;
-  height: 302px;
 }
 
 .footer-menu {
