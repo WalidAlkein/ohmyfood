@@ -12,6 +12,7 @@
     align-items: flex-end;
     padding: 16px 25px 12px 13px;
     line-height: 25px;
+    width: 100%;
     transition: width 0.5s ease;
     > div {
         width: calc(100% - 50px);
@@ -69,7 +70,7 @@
     background-color: $tertiary-color; /* Couleur de fond de la coche, ajustez selon votre design */
     color: white; /* Couleur de l'icône */
     font-size: 1.5em; /* Ajustez la taille de l'icône selon vos besoins */
-    transition: right 0.3s ease-out;
+    transition: right 0.5s ease-out;
 
 }
 .card-menu:hover .box {
