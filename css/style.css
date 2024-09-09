@@ -520,7 +520,7 @@ i {
   position: absolute;
   top: 0;
   right: -25%; /* Commence en dehors de la vue à droite */
-  width: 15%;
+  width: 75px;
   height: 100%;
   background-color: #99E2D0; /* Couleur de fond de la coche, ajustez selon votre design */
   color: white; /* Couleur de l'icône */
@@ -533,7 +533,7 @@ i {
 }
 
 .card-menu:hover .card-menu-text {
-  width: 85%;
+  width: calc(100% - 75px);
 }
 
 .fa-circle-check {
