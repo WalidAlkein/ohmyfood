@@ -54,12 +54,11 @@
 .photo {
    height: 275px;
    object-fit: cover;
-   width: -webkit-fill-available;
+   width: 100%;
 }
 @media screen and (min-width: 768px) {
     .photo {
         height: 382px;
-        width: 100%;
     }
 }
 .box  {
